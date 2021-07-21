@@ -1,0 +1,122 @@
+
+body{
+    background: rgb(197,228,231);
+    font-family: 'Space Mono', monospace;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+main{
+    position: relative;
+}
+
+.logo{
+    margin: 100px 50%;
+}
+
+.calculator{
+    width: 750px;
+    height: 375px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.attribution{
+    background-color: aqua;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 15px 30px;
+}
+
+.calculator-calculation{
+    width: 50%;
+    height: fit-content;
+}
+
+.calculator-calculation p{
+    font-weight:600;
+    margin-bottom: 10px;
+}
+
+.calculator-results{
+    outline: 1px solid blue;
+    width: 50%;
+}
+
+.calculator-calculation__grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns:auto;
+    height: 100px;
+    gap: 30px;
+    padding-right: 30px;
+}
+
+.calculation-amount-input, .calculation__people-input{
+    width: 100%;
+    background:#F3F8FB;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #014749;
+    border-style: none;
+    border-radius: 5px;
+    padding:10px 10px;
+    text-align: right;
+
+}
+
+.calculation__buttons-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculation__row{
+    display: inline-flex;
+    /* outline: olive 2px solid; */
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.calculation__row:last-child{
+    margin-bottom: 0px;
+}
+
+.calculation__btn{
+    padding: 10px;
+    /* border: orange solid 2px; */
+    width: 95px;
+    text-align: center;
+    background: #014749;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.custom{
+    background: #F3F8FB !important;
+    color: black;
+}

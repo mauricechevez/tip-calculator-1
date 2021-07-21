@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 1rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="logo">
+    <h1>SPLI<br>TTER</h1>
+  </div>
+  <section class="calculator">
+    <div class="calculator-calculation">
+      <div class="calculator-calculation__grid">
+        <div class="calculation-bill">
+          <p>Bill Amount</p>
+          <input class="calculation-amount-input" type="number" id="calculation-amount-input" placeholder="0.00"/>
+        </div>
+        <div class="calculation-item2">
+          <p>Select Tip %</p>
+          <div class="calculation__buttons-container">
+            <div class="calculation__row">
+              <div class="calculation__btn" id="btn-5">5%</div>
+              <div class="calculation__btn" id="btn-10">10%</div>
+              <div class="calculation__btn" id="btn-15">15%</div>
+            </div>
+            <div class="calculation__row">
+              <div class="calculation__btn" id="btn-25">25%</div>
+              <div class="calculation__btn" id="btn-50">50%</div>
+              <div class="calculation__btn custom" id="btn-custom">Custom</div>
+            </div>
+          </div>
+        </div>
+        <div class="calculation-item3">
+          <p>Number of People</p>
+          <input class="calculation__people-input" type="number" id="calculation__people-input" value="1"/>
+        </div>
+      </div>
+    </div>
+    <div class="calculator-results">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab quae blanditiis itaque alias, quasi a officia, aut autem culpa dolorum nostrum cumque eum! Pariatur voluptas perspiciatis aliquid animi consequatur?
+    </div>
+
+  </section>
+</main>
+
+  Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+  
+  <!-- <footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Maurice Chevez</a>.
+  </div>
+</footer> -->
+<script src="./js/index.js"></script>
+</body>
+</html>
