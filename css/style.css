@@ -114,9 +114,11 @@ footer{
     border-radius: 5px;
     font-weight: 700;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .custom{
     background: #F3F8FB !important;
     color: black;
+    
 }
