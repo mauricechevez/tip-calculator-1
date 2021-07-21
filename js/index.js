@@ -7,6 +7,7 @@ const btn50Pct = document.getElementById('btn-50');
 const btnCustom = document.getElementById('btn-custom');
 const inputErrorMessage = document.getElementById('calculation-amount__err-msg')
 let amountInput = document.getElementById('calculation-amount-input');
+let peopleAmount = document.getElementById('calculation__people-input');
 
 
 //variables
@@ -27,11 +28,11 @@ const buttonPressedValue = (e)=>{
         const percentageString = e.textContent
         const percentageNumber = parseInt(percentageString.replace('%',''))
         percentageAmount = percentageNumber;
-    } return percentageNumber; 
+    } return percentageAmount; 
 }
 
 const calculatePct = (num, pct)=>{
-    totalAmount = parseFloat(num/100)*pct;
+    totalAmount = (parseFloat(num/100)*pct)/parseInt(peopleAmount.value);
    return totalAmount;
 }
 
