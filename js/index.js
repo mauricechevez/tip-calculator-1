@@ -5,7 +5,9 @@ const btn15Pct = document.getElementById('btn-15');
 const btn25Pct = document.getElementById('btn-25');
 const btn50Pct = document.getElementById('btn-50');
 const btnCustom = document.getElementById('btn-custom');
+const inputErrorMessage = document.getElementById('calculation-amount__err-msg')
 let amountInput = document.getElementById('calculation-amount-input');
+
 
 //variables
 let percentageAmount = 0;
@@ -15,12 +17,17 @@ let totalAmount = 0
 // amountInput is entered by the person
 // Button is clicked. Depending on button pressed, the amount returned back should be different since different percentage numbers.
 
-
 const buttonPressedValue = (e)=>{
-    const percentageString = e.textContent
-    const percentageNumber = parseInt(percentageString.replace('%',''))
-    percentageAmount = percentageNumber;
-    return percentageNumber;
+    if(amountInput.value === ''){
+        // the input box is empty. Validate what to do if it is empty.
+        amountInput.classList.add('calculation-amount-input--error')
+        inputErrorMessage.classList.add('calculation-amount__err-msg--active')
+        console.log('Please fill this out')
+    } else {
+        const percentageString = e.textContent
+        const percentageNumber = parseInt(percentageString.replace('%',''))
+        percentageAmount = percentageNumber;
+    } return percentageNumber; 
 }
 
 const calculatePct = (num, pct)=>{
@@ -31,9 +38,16 @@ const calculatePct = (num, pct)=>{
 /* ########### Event Listeners ########### */
 
 btn5Pct.addEventListener('click',()=>{
-    buttonPressedValue(btn5Pct)
-    calculatePct(amountInput.value,percentageAmount)
-    console.log(totalAmount.toFixed(2))
+    if(amountInput.value === ''){
+        // the input box is empty. Validate what to do if it is empty.
+        amountInput.classList.add('calculation-amount-input--error')
+        inputErrorMessage.classList.add('calculation-amount__err-msg--active')
+        console.log('Please fill this out')
+    } else {
+        buttonPressedValue(btn5Pct)
+        calculatePct(amountInput.value,percentageAmount)
+        console.log(totalAmount.toFixed(2))
+    }
 })
 
 btn10Pct.addEventListener('click',()=>{
@@ -62,3 +76,7 @@ btnCustom.addEventListener('click',()=>{
     
 })
 
+amountInput.addEventListener('click',()=>{
+    amountInput.classList.remove('calculation-amount-input--error');
+    inputErrorMessage.classList.remove('calculation-amount__err-msg--active')
+})

@@ -82,7 +82,21 @@ footer{
     border-radius: 5px;
     padding:10px 10px;
     text-align: right;
+}
 
+.calculation-amount-input--error{
+    border:red 1px solid
+}
+
+.calculation-amount__err-msg{
+    display: none;
+}
+
+.calculation-amount__err-msg--active{
+    display: block;
+    text-align: right;
+    color:red;
+    font-size: .9rem;
 }
 
 .calculation__buttons-container{
