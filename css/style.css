@@ -1,6 +1,12 @@
+:root{
+    --dark-color:hsl(182, 97%, 15%);
+    --light-color:hsl(202, 50%, 97%);
+    --results-color:hsl(170, 69%, 45%);
+    --bg-color:hsl(185, 41%, 84%);
+}
 
 body{
-    background: rgb(197,228,231);
+    background: var(--bg-color);
     font-family: 'Space Mono', monospace;
 }
 
@@ -62,8 +68,41 @@ footer{
 }
 
 .calculator-results{
-    outline: 1px solid blue;
+    border-radius: 5px;
     width: 50%;
+    background-color: var(--dark-color);
+    padding:35px 20px 20px 20px;
+
+}
+
+.calculator-results__display-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border:2px solid red; */
+}
+.calculator-results__display-container:first-child{
+    margin-bottom: 3rem;
+}
+
+.calculator-results__tip-total-text{
+    font-weight: 600;
+    color: white;
+    font-size: .9rem;
+}
+
+.calculator-results__per-person{
+    font-size: .7rem; 
+    font-weight: 500;
+    padding:7px;
+    color: var(--light-color) !important;
+}
+
+
+.calculator-results__display-amount{
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--results-color);
 }
 
 .calculator-calculation__grid{
@@ -71,16 +110,16 @@ footer{
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns:auto;
     height: 100px;
-    gap: 30px;
+    gap: 40px;
     padding-right: 30px;
 }
 
 .calculation-amount-input, .calculation__people-input{
     width: 100%;
-    background:#F3F8FB;
+    background:var(--light-color);
     font-size: 1rem;
     font-weight: 700;
-    color: #014749;
+    color: var(--dark-color);
     border-style: none;
     border-radius: 5px;
     padding:10px 10px;
@@ -111,7 +150,6 @@ footer{
 
 .calculation__row{
     display: inline-flex;
-    /* outline: olive 2px solid; */
     justify-content: space-between;
     width: 100%;
     margin-bottom: 10px;
@@ -137,5 +175,17 @@ footer{
 .custom{
     background: #F3F8FB !important;
     color: black;
+    
+}
+
+#reset-button{
+    margin: 65px auto 40px auto;
+    max-width: 330px;
+    background-color: aquamarine;
+    padding:20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
     
 }

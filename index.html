@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Tip calculator app</title>
+  <title>Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -54,7 +54,28 @@
       </div>
     </div>
     <div class="calculator-results">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab quae blanditiis itaque alias, quasi a officia, aut autem culpa dolorum nostrum cumque eum! Pariatur voluptas perspiciatis aliquid animi consequatur?
+      <div class="calculator-results__display-container">
+        <div class="calculator-results__tip-total-text">
+          <p>Tip Amount</p>
+          <p class="calculator-results__per-person">/ person</p>
+        </div>
+      
+        <div class="calculator-results__total-display">
+          <div class="calculator-results__display-amount">$<span id="tip-amount">0.00</span></div>
+        </div>
+      </div>
+      <div class="calculator-results__display-container">
+          <div class="calculator-results__tip-total-text">
+            <p>Total</p>
+            <p class="calculator-results__per-person">/ person</p>
+          </div>
+          <div class="calculator-results__total-display">
+            <div class="calculator-results__display-amount">$<span id="total-amount">0.00</span></div>
+          </div>
+      </div>
+      <div id="reset-button">
+        RESET
+      </div>
     </div>
 
   </section>

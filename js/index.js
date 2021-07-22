@@ -8,11 +8,12 @@ const btnCustom = document.getElementById('btn-custom');
 const inputErrorMessage = document.getElementById('calculation-amount__err-msg')
 let amountInput = document.getElementById('calculation-amount-input');
 let peopleAmount = document.getElementById('calculation__people-input');
-
+let tipAmount = document.getElementById('tip-amount');
+let totalAmountDisplay = document.getElementById('total-amount');
 
 //variables
 let percentageAmount = 0;
-let totalAmount = 0
+let totalAmount = 0;
 
 // ****** Pseudo Code for calculation
 // amountInput is entered by the person
@@ -32,7 +33,11 @@ const buttonPressedValue = (e)=>{
 }
 
 const calculatePct = (num, pct)=>{
+    if(peopleAmount.value === '0'){
+        console.log('This cannot be 0')
+    } else {
     totalAmount = (parseFloat(num/100)*pct)/parseInt(peopleAmount.value);
+    }
    return totalAmount;
 }
 
@@ -47,29 +52,35 @@ btn5Pct.addEventListener('click',()=>{
     } else {
         buttonPressedValue(btn5Pct)
         calculatePct(amountInput.value,percentageAmount)
-        console.log(totalAmount.toFixed(2))
+        // console.log(totalAmount.toFixed(2))
+        tipAmount.textContent = totalAmount.toFixed(2);
     }
 })
 
 btn10Pct.addEventListener('click',()=>{
     buttonPressedValue(btn10Pct)
     calculatePct(amountInput.value,percentageAmount)
-    console.log(totalAmount.toFixed(2))
+    // console.log(totalAmount.toFixed(2))
+    tipAmount.textContent = totalAmount.toFixed(2);
+
 })
 btn15Pct.addEventListener('click',()=>{
     buttonPressedValue(btn15Pct)
     calculatePct(amountInput.value,percentageAmount)
-    console.log(totalAmount.toFixed(2))
+    // console.log(totalAmount.toFixed(2))
+    tipAmount.textContent = totalAmount.toFixed(2);
 })
 btn25Pct.addEventListener('click',()=>{
     buttonPressedValue(btn25Pct)
     calculatePct(amountInput.value,percentageAmount)
-    console.log(totalAmount.toFixed(2))
+    // console.log(totalAmount.toFixed(2))
+    tipAmount.textContent = totalAmount.toFixed(2);
 })
 btn50Pct.addEventListener('click',()=>{
     buttonPressedValue(btn50Pct)
     calculatePct(amountInput.value,percentageAmount)
-    console.log(totalAmount.toFixed(2))
+    // console.log(totalAmount.toFixed(2))
+    tipAmount.textContent = totalAmount.toFixed(2);
 })
 
 btnCustom.addEventListener('click',()=>{
