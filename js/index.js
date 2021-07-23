@@ -9,8 +9,10 @@ const inputErrorMessage = document.getElementById('calculation-amount__err-msg')
 const peopleInputErrorMessage = document.getElementById('calculation__people-input-err-msg')
 const resetButton = document.getElementById('reset-button');
 const customModal = document.getElementsByClassName('custom-modal')[0];
-const customModalCancelBtn = document.getElementById('custom-modal__close-btn');
-let customModalInputPct = document.getElementById('custom-modal__inputfield').value
+const btnCustomModalCancel = document.getElementById('custom-modal__close-btn');
+const btnCustomModalCalculate = document.getElementById('custom-calculate-btn')
+const customModalErrorMsg = document.getElementsByClassName('custom-modal__error-msg')[0]
+let customModalInputPct = document.getElementById('custom-modal__inputfield')
 let amountInput = document.getElementById('calculation-amount-input');
 let peopleAmount = document.getElementById('calculation__people-input');
 let tipAmount = document.getElementById('tip-amount');
@@ -31,17 +33,19 @@ const buttonPressedValue = (e)=>{
         return percentageAmount; 
     } 
 
+const customValueCalculation = (e)=>{
+    const percentageString = e.value
+    const percentageNumber = parseInt(percentageString)
+    percentageAmount = percentageNumber;
+    return percentageAmount; 
+}
+
 const calculatePct = (num, pct)=>{
     totalTipAmount = (parseFloat(num/100)*pct)/parseInt(peopleAmount.value);
     totalBillAmount = (totalTipAmount + parseFloat(amountInput.value)) / peopleAmount.value
+    // console.log(totalTipAmount.toFixed(2))
+    // console.log(totalBillAmount.toFixed(2))
     return totalTipAmount;
-}
-
-const calculateCustomPct = (num, pct)=>{
-    // Grab custom input field value
-    // calculate that number by bill amount divided by peopleAmount.value
-    totalTipAmount = (parseFloat(num/100)*pct)/parseInt(peopleAmount.value)
-    totalBillAmount = (totalTipAmount + parseFloat(amountInput.value)/ peopleAmount.value)
 }
 
 function addActive(btn){
@@ -157,12 +161,37 @@ btn50Pct.addEventListener('click',()=>{
 /* #### CUSTOM Modal Events #### */
 
 btnCustom.addEventListener('click',()=>{
-    console.log(amountInput.value)
-    customModal.classList.add('custom-modal--visible');
-    
+    if(amountInput.value === ''){
+        amountInput.classList.add('calculation-amount-input--error')
+        inputErrorMessage.classList.add('calculation-amount__err-msg--active')
+    } else if (peopleAmount.value === '0'){
+        peopleInputErrorMessage.classList.add('calculation__people-input-err-msg--active')
+        peopleAmount.classList.add('calculation__people-input--error')
+    } else {
+    customModal.classList.add('custom-modal--visible');  
+    }
+})
+btnCustomModalCalculate.addEventListener('click', ()=>{
+    if(customModalInputPct.value ===''){
+        console.log('Please enter a valid number')
+        customModalInputPct.classList.add('custom-modal__inputfield--err')
+        customModalErrorMsg.classList.add('custom-modal__error-msg--active')
+    } else {
+    customValueCalculation(customModalInputPct)
+    calculatePct(amountInput.value,percentageAmount)
+    tipAmount.textContent = totalTipAmount.toFixed(2);
+    totalAmountDisplay.textContent = totalBillAmount.toFixed(2);
+    customModal.classList.remove('custom-modal--visible');
+    }    
+
 })
 
-customModalCancelBtn.addEventListener('click',()=>{
+customModalInputPct.addEventListener('click', ()=>{
+    customModalInputPct.classList.remove('custom-modal__inputfield--err');
+    customModalErrorMsg.classList.remove('custom-modal__error-msg--active');
+})
+
+btnCustomModalCancel.addEventListener('click',()=>{
     customModal.classList.remove('custom-modal--visible');
 })
 
