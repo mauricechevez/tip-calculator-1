@@ -3,7 +3,9 @@
 ## Current Progress
 ![Current Progress of app](./images/tip-em.png)
 
-Almost done. Need to work on the Custom button functionality. I will likely make a modal for it instead of using Front End Mentor's suggestion. 
+Almost done. Here's what else is needed:
+1. Need to work on the Custom button functionality. I will likely make a modal for it instead of using Front End Mentor's suggestion. 
+2. Mobile queries. 
 
 ---
 
