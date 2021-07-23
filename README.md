@@ -1,5 +1,12 @@
 # Frontend Mentor - Tip calculator app
 
+## Current Progress
+![Current Progress of app](./images/tip-em.png)
+
+Almost done. Need to work on the Custom button functionality. I will likely make a modal for it instead of using Front End Mentor's suggestion. 
+
+---
+
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
