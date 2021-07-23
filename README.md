@@ -5,13 +5,17 @@ Almost done. Here's what else is needed:
 1. ~~Need to work on the Custom button functionality. I will likely make a modal for it instead of using Front End Mentor's suggestion~~. Complete. I may make the entire background somewhat opaque in the future.
 2. Add icons to input fields (Dollar sign and People icon)
 3. ~~Mobile queries~~. Complete.
+4. Remove arrows from input fields (Firefox)
+5. Add % sign custom percentage input field.
 
 ---
 # Screenshots
 ## Desktop
 ![Current Progress of app](./images/tip-em.png)
 ## Mobile
-![Mobile design preview for Tip calculator app coding challenge](./images/tip-em-mobile.png)
+Screenshots based off an iPhone 12
+
+![Mobile design preview for Tip calculator app coding challenge](./images/tip-em-mobile-complete.png) ![Mobile design preview for Tip calculator app coding challenge](./images/tip-em-mobile.png) 
 
 ## Welcome! 👋
 
