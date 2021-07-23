@@ -359,7 +359,7 @@ footer{
     }
 
     main{
-        margin-top: 15px;
+        margin-top: 20px;
     }
 
     .logo h1{
@@ -376,25 +376,35 @@ footer{
         width: 95vw;
         height: fit-content;
         height: -moz-fit-content;
-        margin:25px auto;
+        margin:20px auto;
     }
 
     .calculator-calculation__grid{
         height: fit-content;
         height: -moz-fit-content;
         gap:30px;
+        grid-template-rows: none;
+        padding-right: 0;
     }
     .calculator-results{
         width: 100%;
         margin-top: 30px;
     }
-    .calculator-calculation__grid{
-        grid-template-rows: none;
+  
+    .calculator-results__display-amount{
+        font-size: 2.1rem;
     }
-
     .calculator-results__display-container:first-child{
         margin-bottom: 1rem;
     }
+    .calculator-results__tip-total-text{
+        font-size: .8rem;
+    }
+
+    .calculation-amount-input, .calculation__people-input{
+        text-align: center;
+    }
+
     #reset-button{
         margin: 15px auto 20px auto 
     }
@@ -424,5 +434,6 @@ footer{
     .calculation__btn{
         width:85px;
         padding:8px;
+        font-size: .9rem;
     }
   }

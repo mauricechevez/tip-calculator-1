@@ -75,6 +75,7 @@ function resetAll(){
     peopleAmount.value = '1';
     tipAmount.textContent = '0.00'
     totalAmountDisplay.textContent = '0.00'
+    customModalInputPct.value = '';
     removeActives();
 }
 
@@ -201,6 +202,7 @@ customModalInputPct.addEventListener('click', ()=>{
 
 btnCustomModalCancel.addEventListener('click',()=>{
     customModal.classList.remove('custom-modal--visible');
+    customModalInputPct.value = '';
 })
 
 /* #### END of CUSTOM Modal Events #### */
