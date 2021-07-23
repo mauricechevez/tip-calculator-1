@@ -43,8 +43,6 @@ const customValueCalculation = (e)=>{
 const calculatePct = (num, pct)=>{
     totalTipAmount = (parseFloat(num/100)*pct)/parseInt(peopleAmount.value);
     totalBillAmount = (totalTipAmount + parseFloat(amountInput.value)) / peopleAmount.value
-    // console.log(totalTipAmount.toFixed(2))
-    // console.log(totalBillAmount.toFixed(2))
     return totalTipAmount;
 }
 
@@ -181,6 +179,8 @@ btnCustomModalCalculate.addEventListener('click', ()=>{
     calculatePct(amountInput.value,percentageAmount)
     tipAmount.textContent = totalTipAmount.toFixed(2);
     totalAmountDisplay.textContent = totalBillAmount.toFixed(2);
+    removeActives()
+    addActive(btnCustom)
     customModal.classList.remove('custom-modal--visible');
     }    
 

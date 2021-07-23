@@ -68,7 +68,17 @@ main{
     border-radius: 15px;
     display: none;
     z-index: 1;
+    opacity: 0;
+    transition: all 3s ease-in-out 5s;
    
+}
+
+.custom-modal--visible{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
 }
 
 .custom-modal h1{
@@ -77,12 +87,7 @@ main{
     margin-bottom: 25px;
 }
 
-.custom-modal--visible{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 footer{
     position: absolute;
@@ -100,9 +105,6 @@ footer{
     justify-content: center;
 }
 
-/* .calculator{
-    
-} */
 
 .calculator-calculation{
     width: 50%;
@@ -256,12 +258,12 @@ footer{
 }
 
 .calculation__btn--active{
-    background-color: var(--active-color);
-    color: black;
+    background-color: var(--active-color) !important;
+    color: black !important;
 }
 
 .custom{
-    background: #F3F8FB !important;
+    background: #F3F8FB;
     color: black;
 }
 
