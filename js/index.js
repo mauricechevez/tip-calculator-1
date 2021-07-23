@@ -18,6 +18,14 @@ let peopleAmount = document.getElementById('calculation__people-input');
 let tipAmount = document.getElementById('tip-amount');
 let totalAmountDisplay = document.getElementById('total-amount');
 
+/* Calculate proportions of element - for MOBILE */
+const calcBox = document.querySelector('.calculator')
+let calcBoxWidth = calcBox.clientWidth;
+let calcBoxheight = calcBox.clientHeight;
+
+// console.log(`${width} wide and ${height}`)
+
+
 
 
 /* ######## variables ######## */
