@@ -363,7 +363,7 @@ footer{
     }
 
     .logo h1{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
   
     .calculator-calculation{
@@ -419,5 +419,10 @@ footer{
 
     .custom-modal__inputfield{
         font-size: 1.2rem;
+    }
+
+    .calculation__btn{
+        width:85px;
+        padding:8px;
     }
   }
