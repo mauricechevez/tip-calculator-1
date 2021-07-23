@@ -7,10 +7,13 @@ const btn50Pct = document.getElementById('btn-50');
 const btnCustom = document.getElementById('btn-custom');
 const inputErrorMessage = document.getElementById('calculation-amount__err-msg')
 const peopleInputErrorMessage = document.getElementById('calculation__people-input-err-msg')
+const resetButton = document.getElementById('reset-button');
 let amountInput = document.getElementById('calculation-amount-input');
 let peopleAmount = document.getElementById('calculation__people-input');
 let tipAmount = document.getElementById('tip-amount');
 let totalAmountDisplay = document.getElementById('total-amount');
+
+
 
 /* ######## variables ######## */
 let percentageAmount = 0;
@@ -47,9 +50,21 @@ function removeActives(){
     }
 }
 
-// function resetAll(){
-
-// }
+function resetAll(){
+    // Change the (Bill) Amount input
+    // Change the Number of People input
+    // change the button Active color/class
+    // Change the Tip Amount Display text and value
+    // Change the Total Amount Display text and value
+    percentageAmount = 0;
+    totalTipAmount = 0;
+    totalBillAmount = 0;
+    amountInput.value = '';
+    peopleAmount.value = '1';
+    tipAmount.textContent = '0.00'
+    totalAmountDisplay.textContent = '0.00'
+    removeActives();
+}
 
 
 /* ########### Event Listeners ########### */
@@ -84,7 +99,6 @@ btn10Pct.addEventListener('click',()=>{
     calculatePct(amountInput.value,percentageAmount)
     removeActives()
     addActive(btn10Pct)
-    // console.log(totalTipAmount.toFixed(2))
     tipAmount.textContent = totalTipAmount.toFixed(2);
     totalAmountDisplay.textContent = totalBillAmount.toFixed(2)
     }
@@ -101,7 +115,6 @@ btn15Pct.addEventListener('click',()=>{
     calculatePct(amountInput.value,percentageAmount)
     removeActives()
     addActive(btn15Pct)
-    // console.log(totalTipAmount.toFixed(2))
     tipAmount.textContent = totalTipAmount.toFixed(2);
     totalAmountDisplay.textContent = totalBillAmount.toFixed(2)
     }
@@ -118,7 +131,6 @@ btn25Pct.addEventListener('click',()=>{
     calculatePct(amountInput.value,percentageAmount)
     removeActives()
     addActive(btn25Pct)
-    // console.log(totalTipAmount.toFixed(2))
     tipAmount.textContent = totalTipAmount.toFixed(2);
     totalAmountDisplay.textContent = totalBillAmount.toFixed(2)
     }
@@ -135,7 +147,6 @@ btn50Pct.addEventListener('click',()=>{
     calculatePct(amountInput.value,percentageAmount)
     removeActives()
     addActive(btn50Pct)
-    // console.log(totalTipAmount.toFixed(2))
     tipAmount.textContent = totalTipAmount.toFixed(2);
     totalAmountDisplay.textContent = totalBillAmount.toFixed(2)
     }
@@ -155,3 +166,13 @@ peopleAmount.addEventListener('click',()=>{
     peopleInputErrorMessage.classList.remove('calculation__people-input-err-msg--active')
     peopleAmount.classList.remove('calculation__people-input--error')
 })
+
+resetButton.addEventListener('click', ()=>{
+    resetAll();
+})
+
+// TEST BUTTON !!!!!
+// const testButton = document.getElementsByClassName('reset-button-draft')[0];
+// testButton.addEventListener('click', ()=>{
+//     resetAll()
+// })

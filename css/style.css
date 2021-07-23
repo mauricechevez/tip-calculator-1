@@ -248,3 +248,7 @@ footer{
 #reset-button:hover{
     background-color: var(--active-color);
 }
+
+.reset-button-draft{
+    float:right;
+}
