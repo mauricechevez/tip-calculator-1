@@ -1,16 +1,17 @@
 # Frontend Mentor - Tip calculator app
-
+ 
 ## Current Progress
-![Current Progress of app](./images/tip-em.png)
-
 Almost done. Here's what else is needed:
 1. ~~Need to work on the Custom button functionality. I will likely make a modal for it instead of using Front End Mentor's suggestion~~. Complete. I may make the entire background somewhat opaque in the future.
 2. Add icons to input fields (Dollar sign and People icon)
 3. ~~Mobile queries~~. Complete.
 
 ---
-
-![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
+# Screenshots
+## Desktop
+![Current Progress of app](./images/tip-em.png)
+## Mobile
+![Mobile design preview for Tip calculator app coding challenge](./images/tip-em-mobile.png)
 
 ## Welcome! 👋
 

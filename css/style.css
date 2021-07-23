@@ -410,7 +410,7 @@ footer{
     }
 
     .custom-modal{
-        margin:-20px;
+        margin:-15px -22px
     }
 
     .custom-modal--visible{
@@ -418,7 +418,7 @@ footer{
         flex-direction: column;
         justify-content: center;
         width: 90%;
-        height: 600px;
+        height: 85%;
     }
 
     .custom-modal h1{
