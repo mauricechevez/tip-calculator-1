@@ -4,9 +4,9 @@
 ![Current Progress of app](./images/tip-em.png)
 
 Almost done. Here's what else is needed:
-1. Need to work on the Custom button functionality. I will likely make a modal for it instead of using Front End Mentor's suggestion. 
+1. ~~Need to work on the Custom button functionality. I will likely make a modal for it instead of using Front End Mentor's suggestion~~. Complete. I may make the entire background somewhat opaque in the future.
 2. Add icons to input fields (Dollar sign and People icon)
-3. Mobile queries. 
+3. ~~Mobile queries~~. Complete.
 
 ---
 
