@@ -26,6 +26,7 @@ body{
 h1{
     font-size: 2rem;
     font-weight: 700;
+    letter-spacing: .7rem;
 }
 
 main{
@@ -38,6 +39,7 @@ main{
     width:fit-content;
     width:-moz-fit-content;
     padding: 15px;
+    
 }
 
 .calculator{
