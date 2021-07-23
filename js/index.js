@@ -6,27 +6,24 @@ const btn25Pct = document.getElementById('btn-25');
 const btn50Pct = document.getElementById('btn-50');
 const btnCustom = document.getElementById('btn-custom');
 const inputErrorMessage = document.getElementById('calculation-amount__err-msg')
+const peopleInputErrorMessage = document.getElementById('calculation__people-input-err-msg')
 let amountInput = document.getElementById('calculation-amount-input');
 let peopleAmount = document.getElementById('calculation__people-input');
 let tipAmount = document.getElementById('tip-amount');
 let totalAmountDisplay = document.getElementById('total-amount');
 
-//variables
+/* ######## variables ######## */
 let percentageAmount = 0;
 let totalTipAmount = 0;
 let totalBillAmount = 0;
 
-// ****** Pseudo Code for calculation
-// amountInput is entered by the person
-// Button is clicked. Depending on button pressed, the amount returned back should be different since different percentage numbers.
-
+/* ######## FUNCTIONS ######## */
 const buttonPressedValue = (e)=>{
         const percentageString = e.textContent
         const percentageNumber = parseInt(percentageString.replace('%',''))
         percentageAmount = percentageNumber;
         return percentageAmount; 
     } 
-
 
 const calculatePct = (num, pct)=>{
     if(peopleAmount.value === '0'){
@@ -50,6 +47,11 @@ function removeActives(){
     }
 }
 
+// function resetAll(){
+
+// }
+
+
 /* ########### Event Listeners ########### */
 
 btn5Pct.addEventListener('click',()=>{
@@ -57,6 +59,9 @@ btn5Pct.addEventListener('click',()=>{
         // the input box is empty. Validate what to do if it is empty.
         amountInput.classList.add('calculation-amount-input--error')
         inputErrorMessage.classList.add('calculation-amount__err-msg--active')
+    } else if (peopleAmount.value === '0'){
+        peopleInputErrorMessage.classList.add('calculation__people-input-err-msg--active')
+        peopleAmount.classList.add('calculation__people-input--error')
     } else {
         buttonPressedValue(btn5Pct)
         calculatePct(amountInput.value,percentageAmount)
@@ -71,6 +76,9 @@ btn10Pct.addEventListener('click',()=>{
     if(amountInput.value === ''){
         amountInput.classList.add('calculation-amount-input--error')
         inputErrorMessage.classList.add('calculation-amount__err-msg--active')
+    } else if (peopleAmount.value === '0'){
+        peopleInputErrorMessage.classList.add('calculation__people-input-err-msg--active')
+        peopleAmount.classList.add('calculation__people-input--error')
     } else {
     buttonPressedValue(btn10Pct)
     calculatePct(amountInput.value,percentageAmount)
@@ -85,6 +93,9 @@ btn15Pct.addEventListener('click',()=>{
     if(amountInput.value === ''){
         amountInput.classList.add('calculation-amount-input--error')
         inputErrorMessage.classList.add('calculation-amount__err-msg--active')
+    } else if (peopleAmount.value === '0'){
+        peopleInputErrorMessage.classList.add('calculation__people-input-err-msg--active')
+        peopleAmount.classList.add('calculation__people-input--error')
     } else {
     buttonPressedValue(btn15Pct)
     calculatePct(amountInput.value,percentageAmount)
@@ -99,6 +110,9 @@ btn25Pct.addEventListener('click',()=>{
     if(amountInput.value === ''){
         amountInput.classList.add('calculation-amount-input--error')
         inputErrorMessage.classList.add('calculation-amount__err-msg--active')
+    } else if (peopleAmount.value === '0'){
+        peopleInputErrorMessage.classList.add('calculation__people-input-err-msg--active')
+        peopleAmount.classList.add('calculation__people-input--error')
     } else {
     buttonPressedValue(btn25Pct)
     calculatePct(amountInput.value,percentageAmount)
@@ -113,6 +127,9 @@ btn50Pct.addEventListener('click',()=>{
     if(amountInput.value === ''){
         amountInput.classList.add('calculation-amount-input--error')
         inputErrorMessage.classList.add('calculation-amount__err-msg--active')
+    } else if (peopleAmount.value === '0'){
+        peopleInputErrorMessage.classList.add('calculation__people-input-err-msg--active')
+        peopleAmount.classList.add('calculation__people-input--error')
     } else {
     buttonPressedValue(btn50Pct)
     calculatePct(amountInput.value,percentageAmount)
@@ -132,4 +149,9 @@ btnCustom.addEventListener('click',()=>{
 amountInput.addEventListener('click',()=>{
     amountInput.classList.remove('calculation-amount-input--error');
     inputErrorMessage.classList.remove('calculation-amount__err-msg--active')
+})
+
+peopleAmount.addEventListener('click',()=>{
+    peopleInputErrorMessage.classList.remove('calculation__people-input-err-msg--active')
+    peopleAmount.classList.remove('calculation__people-input--error')
 })
