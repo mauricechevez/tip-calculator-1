@@ -8,6 +8,9 @@ const btnCustom = document.getElementById('btn-custom');
 const inputErrorMessage = document.getElementById('calculation-amount__err-msg')
 const peopleInputErrorMessage = document.getElementById('calculation__people-input-err-msg')
 const resetButton = document.getElementById('reset-button');
+const customModal = document.getElementsByClassName('custom-modal')[0];
+const customModalCancelBtn = document.getElementById('custom-modal__close-btn');
+let customModalInputPct = document.getElementById('custom-modal__inputfield').value
 let amountInput = document.getElementById('calculation-amount-input');
 let peopleAmount = document.getElementById('calculation__people-input');
 let tipAmount = document.getElementById('tip-amount');
@@ -29,13 +32,16 @@ const buttonPressedValue = (e)=>{
     } 
 
 const calculatePct = (num, pct)=>{
-    if(peopleAmount.value === '0'){
-        console.log('This cannot be 0')
-    } else {
     totalTipAmount = (parseFloat(num/100)*pct)/parseInt(peopleAmount.value);
     totalBillAmount = (totalTipAmount + parseFloat(amountInput.value)) / peopleAmount.value
-    }
-   return totalTipAmount;
+    return totalTipAmount;
+}
+
+const calculateCustomPct = (num, pct)=>{
+    // Grab custom input field value
+    // calculate that number by bill amount divided by peopleAmount.value
+    totalTipAmount = (parseFloat(num/100)*pct)/parseInt(peopleAmount.value)
+    totalBillAmount = (totalTipAmount + parseFloat(amountInput.value)/ peopleAmount.value)
 }
 
 function addActive(btn){
@@ -50,12 +56,8 @@ function removeActives(){
     }
 }
 
+/* ########### RESET ALL ########### */
 function resetAll(){
-    // Change the (Bill) Amount input
-    // Change the Number of People input
-    // change the button Active color/class
-    // Change the Tip Amount Display text and value
-    // Change the Total Amount Display text and value
     percentageAmount = 0;
     totalTipAmount = 0;
     totalBillAmount = 0;
@@ -152,10 +154,19 @@ btn50Pct.addEventListener('click',()=>{
     }
 })
 
+/* #### CUSTOM Modal Events #### */
+
 btnCustom.addEventListener('click',()=>{
     console.log(amountInput.value)
+    customModal.classList.add('custom-modal--visible');
     
 })
+
+customModalCancelBtn.addEventListener('click',()=>{
+    customModal.classList.remove('custom-modal--visible');
+})
+
+/* #### END of CUSTOM Modal Events #### */
 
 amountInput.addEventListener('click',()=>{
     amountInput.classList.remove('calculation-amount-input--error');

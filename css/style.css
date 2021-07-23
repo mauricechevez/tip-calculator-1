@@ -50,6 +50,23 @@ main{
     border-radius: 15px;
 }
 
+.custom-modal{
+    width: 750px;
+    height: 375px;
+    background-color: white;
+    /* margin: 0 auto; */
+    position: absolute;
+    top:196px;
+    left:585px;
+    outline:1px solid red;
+    border-radius: 15px;
+    display: none;
+}
+
+.custom-modal--visible{
+    display: block;
+}
+
 footer{
     position: absolute;
     bottom: 0px;
@@ -232,7 +249,11 @@ footer{
 .custom{
     background: #F3F8FB !important;
     color: black;
-    
+}
+
+.custom:hover{
+    background-color: var(--results-color) !important;
+    color: white;
 }
 
 #reset-button{
