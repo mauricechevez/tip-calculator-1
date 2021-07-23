@@ -64,7 +64,7 @@ main{
     background-color: white;
     margin: -25px auto;
     position: absolute;
-    outline:1px solid red;
+    /* outline:1px solid red; */
     border-radius: 15px;
     display: none;
     z-index: 1;
@@ -408,7 +408,7 @@ footer{
         flex-direction: column;
         justify-content: center;
         width: 90%;
-        height: 625px;
+        height: 600px;
     }
 
     .custom-modal h1{
