@@ -7,6 +7,7 @@ Almost done. Here's what else is needed:
 3. ~~Mobile queries~~. Complete.
 4. Remove arrows from input fields (Firefox)
 5. Add % sign custom percentage input field.
+6. Add functionality if someone presses the Enter button to calculate the Custom Tip.
 
 ---
 # Screenshots
