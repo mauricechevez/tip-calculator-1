@@ -105,6 +105,37 @@ footer{
 }
 
 
+.calculation-bill{
+    position: relative;
+}
+
+.calculation-item3{
+    position: relative;
+}
+
+.calculation-bill__dollarsign-img, .calculation-bill__people-img{
+    position: absolute;
+    top:36px;
+    left:10px;
+}
+
+.custom-modal__percent-imgbox{
+    position: absolute;
+    width: 20px;
+    left:16px;
+    top:80px;
+}
+
+.custom-modal__percent-img{
+    width: 1.8rem;
+}
+
+.custom-modal__box{
+    position: relative;
+}
+
+
+
 .calculator-calculation{
     width: 50%;
     height: fit-content;
@@ -120,7 +151,6 @@ footer{
     width: 50%;
     background-color: var(--dark-color);
     padding:25px 20px 20px 20px;
-
 }
 
 .calculator-results__display-container{
@@ -290,7 +320,7 @@ footer{
 }
 
 .custom-modal__inputfield{
-    width: 90%;
+    width: 100%;
     background:var(--light-color);
     font-size: 2rem;
     font-weight: 700;
@@ -435,5 +465,13 @@ footer{
         width:85px;
         padding:8px;
         font-size: .9rem;
+    }
+
+    .custom-modal__percent-imgbox{
+        left:13px;
+        top:45px;
+    }
+    .custom-modal__percent-img{
+        width: 1.1rem;
     }
   }

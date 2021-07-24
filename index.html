@@ -25,12 +25,12 @@
   <div class="logo">
     <h1>TIP<br>`EM</h1>
   </div>
-  <!-- <button class="reset-button-draft">reset me</button> -->
   <section class="calculator">
     <div class="calculator-calculation">
       <div class="calculator-calculation__grid">
         <div class="calculation-bill">
           <p>Bill Amount</p>
+          <span class="calculation-bill__dollarsign-img"><img src="./images/icon-dollar.svg"></span>
           <input class="calculation-amount-input" type="number" id="calculation-amount-input" placeholder="0.00" step=".01" required/>
           <div class="calculation-amount__err-msg " id="calculation-amount__err-msg"><span>Please enter an amount</span></div>
         </div>
@@ -51,6 +51,7 @@
         </div>
         <div class="calculation-item3">
           <p>Number of People</p>
+          <span class="calculation-bill__people-img"><img src="./images/icon-person.svg"></span>
           <input class="calculation__people-input" type="number" id="calculation__people-input" value="1"/>
           <div class="calculation__people-input-err-msg" id="calculation__people-input-err-msg"><span>This value cannot be 0</span></div>
         </div>
@@ -81,9 +82,12 @@
       </div>
     </div>
     <div class="custom-modal">
+      <div class="custom-modal__box">
       <h1>Custom tip percent</h1>
+      <span class="custom-modal__percent-imgbox"><img src="./images/percentage-sign-svgrepo-com.svg" class="custom-modal__percent-img"></span>
         <input type="number" class="custom-modal__inputfield" id="custom-modal__inputfield" placeholder="Enter a number"/>
         <div class="custom-modal__error-msg"><span>Please enter a number</span></div>
+      </div>
         <div class="custom-modal__btn-container">
           
         <div id="custom-calculate-btn">Calculate</div>
