@@ -28,7 +28,12 @@ let instructionsActive = false;
 
 // console.log(`${width} wide and ${height}`)
 
+// const width  = window.innerWidth || document.documentElement.clientWidth || 
+// document.body.clientWidth;
+// const height = window.innerHeight|| document.documentElement.clientHeight|| 
+// document.body.clientHeight;
 
+// console.log(width, height);
 
 
 /* ######## variables ######## */
@@ -195,7 +200,26 @@ btnCustomModalCalculate.addEventListener('click', ()=>{
     addActive(btnCustom)
     customModal.classList.remove('custom-modal--visible');
     }    
+})
 
+customModalInputPct.addEventListener('keypress', function(e){
+if(e.keyCode===13){
+    if(customModalInputPct.value ===''){
+        console.log('Please enter a valid number')
+        customModalInputPct.classList.add('custom-modal__inputfield--err')
+        customModalErrorMsg.classList.add('custom-modal__error-msg--active')
+    } else {
+    customValueCalculation(customModalInputPct)
+    calculatePct(amountInput.value,percentageAmount)
+    tipAmount.textContent = totalTipAmount.toFixed(2);
+    totalAmountDisplay.textContent = totalBillAmount.toFixed(2);
+    removeActives()
+    addActive(btnCustom)
+    customModal.classList.remove('custom-modal--visible');
+    }  
+}  else {
+    return;
+}
 })
 
 customModalInputPct.addEventListener('click', ()=>{
