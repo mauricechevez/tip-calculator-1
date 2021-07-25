@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24px"
+   height="24px"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="chevron-up-svgrepo-com.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="12.038359"
+     inkscape:cx="-2.1597628"
+     inkscape:cy="12.003297"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <rect
+     x="0"
+     fill="none"
+     width="24"
+     height="24"
+     id="rect2" />
+  <g
+     id="g6"
+     transform="translate(0.02061855,-2.9073731)">
+    <path
+       d="m 4,15 8,-8 8,8 -1.414,1.414 L 12,9.828 5.414,16.414"
+       id="path4" />
+  </g>
+  <g
+     id="g6-7"
+     transform="translate(0.02061855,3.1107128)">
+    <path
+       d="m 4,15 8,-8 8,8 -1.414,1.414 L 12,9.828 5.414,16.414"
+       id="path4-7" />
+  </g>
+</svg>

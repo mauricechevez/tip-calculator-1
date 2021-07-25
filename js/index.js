@@ -12,6 +12,8 @@ const customModal = document.getElementsByClassName('custom-modal')[0];
 const btnCustomModalCancel = document.getElementById('custom-modal__close-btn');
 const btnCustomModalCalculate = document.getElementById('custom-calculate-btn')
 const customModalErrorMsg = document.getElementsByClassName('custom-modal__error-msg')[0]
+const doubleArrow = document.getElementsByClassName('instructions__title-img')[0];
+const instructionContent = document.getElementsByClassName('instructions__content')[0];
 let customModalInputPct = document.getElementById('custom-modal__inputfield')
 let amountInput = document.getElementById('calculation-amount-input');
 let peopleAmount = document.getElementById('calculation__people-input');
@@ -22,6 +24,7 @@ let totalAmountDisplay = document.getElementById('total-amount');
 const calcBox = document.querySelector('.calculator')
 let calcBoxWidth = calcBox.clientWidth;
 let calcBoxheight = calcBox.clientHeight;
+let instructionsActive = false;
 
 // console.log(`${width} wide and ${height}`)
 
@@ -219,6 +222,18 @@ peopleAmount.addEventListener('click',()=>{
 
 resetButton.addEventListener('click', ()=>{
     resetAll();
+})
+
+doubleArrow.addEventListener('click',()=>{
+    if(!instructionsActive){
+        doubleArrow.classList.add('instructions__title-img--active');
+        instructionContent.classList.add('instructions__content--active')
+        instructionsActive = true;
+    } else {
+        doubleArrow.classList.remove('instructions__title-img--active') 
+        instructionContent.classList.remove('instructions__content--active')
+        instructionsActive = false;
+    }
 })
 
 // TEST BUTTON !!!!!
