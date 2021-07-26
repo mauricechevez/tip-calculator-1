@@ -26,7 +26,7 @@ body{
 
 main{
     position: relative;
-    margin: 50px auto;
+    margin: 35px auto;
 }
 
 .logo{
@@ -61,8 +61,8 @@ main{
     max-width: 750px;
     width: 750px;
     margin: 10px auto;
-    padding:10px 15px;
-    outline: purple 1px solid;
+    padding:10px 5px;
+    /* outline: purple 1px solid; */
     text-align: left;
 
 }
@@ -96,6 +96,15 @@ main{
     visibility:hidden ;
     opacity: 0;
     transition: visibility .1s ease-in-out, opacity 7s ease-in-out ;
+}
+
+.instructions__text h3{
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.instructions__text p{
+  margin-bottom: 20px;
 }
 
 .instructions__content--active{
@@ -437,7 +446,7 @@ footer{
     }
 
     main{
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .logo h1{
@@ -484,7 +493,7 @@ footer{
     }
 
     #reset-button{
-        margin: 15px auto 20px auto 
+        margin: 15px auto 10px auto 
     }
 
     .custom-modal{
