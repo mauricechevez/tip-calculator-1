@@ -352,7 +352,7 @@ footer{
 }
 
 .custom{
-    background: #F3F8FB;
+    background: var(--light-color);
     color: black;
 }
 
