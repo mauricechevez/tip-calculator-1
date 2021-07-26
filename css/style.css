@@ -1,14 +1,25 @@
 :root{
-    --dark-color:hsl(182, 97%, 15%);
-    --light-color:hsl(202, 50%, 97%);
-    --bg-color:hsl(185, 41%, 84%);
-    --results-color:hsl(170, 69%, 45%);
-    --active-color:hsl(173, 61%, 77%);
+    --dark-color: hsl(208deg 68% 33%);
+    --light-color: hsl(199, 76%, 95%);
+    --bg-color: hsl(202, 62%, 83%);
+    --results-color: hsl(201, 61%, 65%);
+    --active-color: hsl(201, 65%, 80%);
+}
+
+html{
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    position: relative;
 }
 
 select {
     border-style: inset;
     outline-color: orange;
+ }
+
+ a{
+     color: var(--bg-color);
  }
 
 /* Hides input arrows for number input boxes */
@@ -69,6 +80,7 @@ main{
     padding:10px 5px;
     /* outline: purple 1px solid; */
     text-align: left;
+    margin-bottom: 100px;
 
 }
 
@@ -155,17 +167,23 @@ footer{
     bottom: 0px;
     text-align: center;
     width: 100%;
+
 }
 
 .attribution{
-    background-color: aqua;
+    background-color: var(--dark-color);
     color: white;
-    height: 50px;
-    display: flex;
+    max-height: 200px;
+    height: fit-content;
+    padding:20px 0px;
     align-items: center;
-    justify-content: center;
+    width: 100vw;
 }
-
+.attribution p{
+    font-size: .7rem;
+    /* overflow-wrap: break-word; */
+    text-align: center;
+}
 
 .calculation-bill{
     position: relative;

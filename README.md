@@ -28,3 +28,23 @@ I'd like to change the color scheme at some point. I might work with these color
     --active-color: hsl(199deg 54% 74%);
 ```
 
+or
+```css
+    --dark-color: hsl(208deg 68% 33%);
+    --light-color: #E9F6FC;
+    --bg-color: #BADCEF;
+    --results-color: #6fb6dc;
+    --active-color: #609CBD;
+```
+
+Original Color scheme
+```css
+    --dark-color: hsl(182, 97%, 15%);
+    --light-color: hsl(202, 50%, 97%);
+    --bg-color: hsl(185, 41%, 84%);
+    --results-color: hsl(170, 69%, 45%);
+    --active-color: hsl(173, 61%, 77%);
+```
+
+
+
